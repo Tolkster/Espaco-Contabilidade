@@ -170,6 +170,14 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <script>
+      $(document).ready(function() {
+        $(".slider").slider();
+      });
+
+      $(document).ready(function() {
+        $(".sidenav").sidenav();
+      });
+
       $(window).scroll(function() {
         if ($(this).scrollTop() >= 50) {
           // If page is scrolled more than 50px
