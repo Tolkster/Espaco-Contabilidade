@@ -8318,7 +8318,7 @@ input[type=range]::-ms-thumb {
 .slider .slides li .caption {
   color: #fff;
   position: absolute;
-  top: 15%;
+  bottom: 15%;
   left: 15%;
   width: 70%;
   opacity: 0;
