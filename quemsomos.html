@@ -16,6 +16,11 @@
       media="screen,projection"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <a id="return-to-top"
+      ><i class="material-icons">
+        keyboard_arrow_up
+      </i></a
+    >
   </head>
 
   <body>
@@ -76,7 +81,7 @@
         <h2 id="azul"><i class="material-icons medium">
             domain
         </i> Matriz</h2>
-        <h3 id="azul">Unidade Centro Sorocaba</h3>
+        <h4>Unidade Centro Sorocaba</h4>
         <br>
         <p style="text-align: justify">
             &emsp; Fundada em Janeiro de 1999 com a missão de satisfazer o cliente e ser
@@ -125,7 +130,7 @@
       <div class="container">
         <div class="row">
           <h5 class="white-text center">Nossas Unidades</h5>
-          <div class="col l3 s3">
+          <div class="col l3 m6 s12">
             <p class="grey-text text-lighten-4 center">
               <b>Matriz Sorocaba</b>
             </p>
@@ -134,7 +139,7 @@
               3202-8302
             </p>
           </div>
-          <div class="col l3 s3">
+          <div class="col l3 m6 s12">
             <p class="grey-text text-lighten-4 center">
               <b>Unidade Itapetininga</b>
             </p>
@@ -142,7 +147,7 @@
               Rua Benjamin Constant, 75<br />Centro<br />(15) 3272-1743
             </p>
           </div>
-          <div class="col l3 s3">
+          <div class="col l3 m6 s12">
             <p class="grey-text text-lighten-4 center">
               <b>Unidade Laranjal Paulista</b>
             </p>
@@ -151,7 +156,7 @@
               3283-4488
             </p>
           </div>
-          <div class="col l3 s3">
+          <div class="col l3 m6 s12">
             <p class="grey-text text-lighten-4 center">
               <b>Unidade Centro Sorocaba</b>
             </p>
@@ -164,20 +169,28 @@
       <div class="footer-copyright">
         <div class="container center">
           © 2019 Espaço Contabilidade
-          <!--<a class="grey-text text-lighten-4 right" href="#!">More Links</a>-->
         </div>
       </div>
     </footer>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <script>
-      $(document).ready(function() {
-        $(".slider").slider();
+    $(window).scroll(function() {
+        if ($(this).scrollTop() >= 50) {
+          // If page is scrolled more than 50px
+          $("#return-to-top").fadeIn(200); // Fade in the arrow
+        } else {
+          $("#return-to-top").fadeOut(200); // Else fade out the arrow
+        }
       });
-
-      $(document).ready(function() {
-        $(".sidenav").sidenav();
-      });
-    </script>
+      $("#return-to-top").click(function() {
+        // When arrow is clicked
+        $("body,html").animate(
+          {
+            scrollTop: 0 // Scroll to top of body
+          },
+          500
+        );
+      });</script>
   </body>
 </html>
